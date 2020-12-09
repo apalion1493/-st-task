@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test task</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map('map', {
+                    center: [55.751574, 37.573856],
+                    zoom: 9
+                }, {
+                    searchControlProvider: 'yandex#search'
+                }),
+
+                myPlacemark1 = new ymaps.Placemark([55.661574, 37.173856], {
+                    hintContent: 'метка 1',
+                    balloonContent: 'это метка 1'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/img/map-icon.svg',
+                    iconImageSize: [50, 50],
+                    iconImageOffset: [-5, -38]
+                }),
+
+                myPlacemark2 = new ymaps.Placemark([55.861574, 37.573856], {
+                    hintContent: 'метка 2',
+                    balloonContent: 'это метка 2'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/img/map-icon.svg',
+                    iconImageSize: [50, 50],
+                    iconImageOffset: [-5, -38]
+                }),
+
+                myPlacemark3 = new ymaps.Placemark([55.961574, 37.573856], {
+                    hintContent: 'метка 3',
+                    balloonContent: 'это метка 3'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/img/map-icon.svg',
+                    iconImageSize: [50, 50],
+                    iconImageOffset: [-5, -38]
+                }),
+
+                myPlacemark4 = new ymaps.Placemark([55.861574, 37.773856], {
+                    hintContent: 'метка 4',
+                    balloonContent: 'это метка 4'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/img/map-icon.svg',
+                    iconImageSize: [50, 50],
+                    iconImageOffset: [-5, -38]
+                }),
+
+                myPlacemark5 = new ymaps.Placemark([55.861574, 37.873856], {
+                    hintContent: 'метка 5',
+                    balloonContent: 'это метка 5'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/img/map-icon.svg',
+                    iconImageSize: [50, 50],
+                    iconImageOffset: [-5, -38]
+                }),
+
+                myPlacemark6 = new ymaps.Placemark([55.461574, 37.573856], {
+                    hintContent: 'метка 6',
+                    balloonContent: 'это метка 6'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/img/map-icon.svg',
+                    iconImageSize: [50, 50],
+                    iconImageOffset: [-5, -38]
+                }),
+
+                myPlacemark7 = new ymaps.Placemark([55.361574, 37.573856], {
+                    hintContent: 'метка 7',
+                    balloonContent: 'это метка 7'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/img/map-icon.svg',
+                    iconImageSize: [50, 50],
+                    iconImageOffset: [-5, -38]
+                }),
+
+                myPlacemark8 = new ymaps.Placemark([55.261574, 37.973856], {
+                    hintContent: 'метка 8',
+                    balloonContent: 'это метка 8'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/img/map-icon.svg',
+                    iconImageSize: [50, 50],
+                    iconImageOffset: [-5, -38]
+                }),
+
+                myPlacemark9 = new ymaps.Placemark([55.561574, 37.973856], {
+                    hintContent: 'метка 9',
+                    balloonContent: 'это метка 9'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/img/map-icon.svg',
+                    iconImageSize: [50, 50],
+                    iconImageOffset: [-5, -38]
+                }),
+
+                myPlacemark10 = new ymaps.Placemark([55.861574, 37.373856], {
+                    hintContent: 'метка 10',
+                    balloonContent: 'это метка 10'
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageHref: 'assets/img/map-icon.svg',
+                    iconImageSize: [50, 50],
+                    iconImageOffset: [-5, -38]
+                });
+
+            myMap.geoObjects
+                .add(myPlacemark1)
+                .add(myPlacemark2)
+                .add(myPlacemark3)
+                .add(myPlacemark4)
+                .add(myPlacemark5)
+                .add(myPlacemark6)
+                .add(myPlacemark7)
+                .add(myPlacemark8)
+                .add(myPlacemark9)
+                .add(myPlacemark10);
+        }
+    </script>
+</head>
+<body>
+
+<header id="header" class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="header__row">
+                    <a href="#" class="logo logo_header">
+                        <span class="logo-icon"></span>
+                        гросс маркет
+                    </a>
+                    <div class="header__blockConnection">
+                        <a class="header__phoneNumber" href="tel:+79264331416">+7 (926) 433-14-16</a>
+                        <button class="btn btn-primary header__blockConnection-btn">заполнить анкету</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <section class="section">
+        <div class="carousel">
+            <div class="carousel__item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="carousel__wrapper">
+                                <div class="carousel__block">
+                                    <span class="carousel__title">У тебя <br> к этому <br> талант</span>
+                                    <div class="carousel__item-btnGroup">
+                                        <button class="prev carousel__item-btn">
+                                            <span class="btn-arrow btn-arrow_rotate"></span>
+                                        </button>
+                                        <button class="next carousel__item-btn">
+                                            <span class="btn-arrow"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="carousel__container">
+                                    <div class="carousel__img">
+                                        <img src="assets/img/carousel-img-1.jpg" alt="Пекарь">
+                                    </div>
+                                    <div class="carousel__text">
+                                        <span class="carousel__text-cloud carousel__text-cloud-bottomLeft text-cloud">валентин</span>
+                                        <span class="carousel__text-cloud carousel__text-cloud-topRight text-cloud">пекарь</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel__item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="carousel__wrapper">
+                                <div class="carousel__block">
+                                    <span class="carousel__title">У тебя <br> всё под <br> контролем</span>
+                                    <div class="carousel__item-btnGroup">
+                                        <button class="prev carousel__item-btn">
+                                            <span class="btn-arrow btn-arrow_rotate"></span>
+                                        </button>
+                                        <button class="next carousel__item-btn">
+                                            <span class="btn-arrow"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="carousel__container">
+                                    <div class="carousel__img">
+                                        <img src="assets/img/carousel-img-2.jpg" alt="Товаровед">
+                                    </div>
+                                    <div class="carousel__text">
+                                        <span class="carousel__text-cloud carousel__text-cloud-bottomRight text-cloud">товаровед</span>
+                                        <span class="carousel__text-cloud carousel__text-cloud-topLeft text-cloud">ксения</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section vacancies-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-between w-100">
+                    <span class="section__title">вакансии в гросс маркете</span>
+                    <div class="vacancies-section__buttons">
+                        <button class="slider-btn slider-btn_prev">
+                            <span class="btn-arrow btn-arrow_rotate"></span>
+                        </button>
+                        <button class="slider-btn slider-btn_next">
+                            <span class="btn-arrow"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="slider">
+                        <div class="slider__item">
+                            <div class="slider__item-main slider__item-block">
+                                <span class="slider__item-title text-cloud">товаровед</span>
+                                <img class="slider__item-img" src="assets/img/worker-and-man-with-groceries-removebg-preview-1.png" alt="Изображение товароведа">
+                            </div>
+                            <div class="slider__item-hover slider__item-block">
+                                <span class="slider__item-text">Доставка товара по магазинам и гипермаркетам компании в обслуживаемом регионе</span>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__item-main slider__item-block">
+                                <span class="slider__item-title text-cloud">водитель</span>
+                                <img class="slider__item-img" src="assets/img/worker-and-man-with-groceries-removebg-preview-2.png" alt="Изображение водителя">
+                            </div>
+                            <div class="slider__item-hover slider__item-block">
+                                <span class="slider__item-text">Доставка товара по магазинам и гипермаркетам компании в обслуживаемом регионе</span>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__item-main slider__item-block">
+                                <span class="slider__item-title text-cloud">пекарь</span>
+                                <img class="slider__item-img" src="assets/img/worker-and-man-with-groceries-removebg-preview-3.png" alt="Изображение пекаря">
+                            </div>
+                            <div class="slider__item-hover slider__item-block">
+                                <span class="slider__item-text">Доставка товара по магазинам и гипермаркетам компании в обслуживаемом регионе</span>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__item-main slider__item-block">
+                                <span class="slider__item-title text-cloud">кассир</span>
+                                <img class="slider__item-img" src="assets/img/worker-and-man-with-groceries-removebg-preview-4.png" alt="Изображение кассира">
+                            </div>
+                            <div class="slider__item-hover slider__item-block">
+                                <span class="slider__item-text">Доставка товара по магазинам и гипермаркетам компании в обслуживаемом регионе</span>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__item-main slider__item-block">
+                                <span class="slider__item-title text-cloud">продавец</span>
+                                <img class="slider__item-img" src="assets/img/worker-and-man-with-groceries-removebg-preview-5.png" alt="Изображение продавца">
+                            </div>
+                            <div class="slider__item-hover slider__item-block">
+                                <span class="slider__item-text">Доставка товара по магазинам и гипермаркетам компании в обслуживаемом регионе</span>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__item-main slider__item-block">
+                                <span class="slider__item-title text-cloud">повар</span>
+                                <img class="slider__item-img" src="assets/img/worker-and-man-with-groceries-removebg-preview-6.png" alt="Изображение повара">
+                            </div>
+                            <div class="slider__item-hover slider__item-block">
+                                <span class="slider__item-text">Доставка товара по магазинам и гипермаркетам компании в обслуживаемом регионе</span>
+                            </div>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__item-main slider__item-block">
+                                <span class="slider__item-title text-cloud">приёмщик</span>
+                                <img class="slider__item-img" src="assets/img/worker-and-man-with-groceries-removebg-preview-7.png" alt="Изображение приёмщика">
+                            </div>
+                            <div class="slider__item-hover slider__item-block">
+                                <span class="slider__item-text">Доставка товара по магазинам и гипермаркетам компании в обслуживаемом регионе</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container instagram-section">
+            <div class="row">
+                <div class="col-12">
+                    <span class="section__title">мы в инстаграме</span>
+                </div>
+                <div class="col-12">
+                    <div class="instagram-list">
+                        <div class="instagram-item">
+                            <div class="content-elem"></div>
+                        </div>
+                        <div class="instagram-item">
+                            <div class="content-elem"></div>
+                        </div>
+                        <div class="instagram-item">
+                            <div class="content-elem"></div>
+                        </div>
+                        <div class="instagram-item">
+                            <div class="content-elem"></div>
+                        </div>
+                        <div class="instagram-item">
+                            <div class="content-elem"></div>
+                        </div>
+                        <div class="instagram-item d-none">
+                            <div class="content-elem"></div>
+                        </div>
+                        <div class="instagram-item d-none">
+                            <div class="content-elem"></div>
+                        </div>
+                        <div class="instagram-item d-none">
+                            <div class="content-elem"></div>
+                        </div>
+                        <div class="instagram-item d-none">
+                            <div class="content-elem"></div>
+                        </div>
+                        <div class="instagram-item d-none">
+                            <div class="content-elem"></div>
+                        </div>
+                        <div class="instagram-item d-none">
+                            <div class="content-elem"></div>
+                        </div>
+                        <div class="instagram-item d-none">
+                            <div class="content-elem"></div>
+                        </div>
+                        <div class="instagram-item d-none">
+                            <div class="content-elem"></div>
+                        </div>
+                    </div>
+                    <button id="instagram-btn" class="btn btn-secondary w-100">показать ещё</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <span class="section__title">география</span>
+                </div>
+                <div class="col-12">
+                    <div class="map-wrapper">
+<!--                        <div class="btn-group-vertical map-btnGroup" role="group" aria-label="Basic example">-->
+<!--                            <button type="button" class="btn btn-light">юрлица</button>-->
+<!--                            <button type="button" class="btn btn-light">физлица</button>-->
+<!--                            <button type="button" class="btn btn-primary">показать всё</button>-->
+<!--                        </div>-->
+<!--                        <input type="checkbox" id="checkBtn">-->
+                        <div class="map-yandex" id="map"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="#" class="logo">
+                        <span class="logo-icon"></span>
+                        гросс маркет
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer__aside">
+                        <span class="footer__aside-text">поделиться</span>
+                        <div class="footer__aside-social">
+                            <a class="footer__link fb-icon" href="#"></a>
+                            <a class="footer__link vk-icon" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row flex-column-reverse flex-md-row">
+            <div class="col-md-6">
+                <p class="footer__text">&#169; Гросс маркет 2020</p>
+            </div>
+            <div class="col-md-6">
+                <a class="footer__text" href="#" data-toggle="modal" data-target="#exampleModal">Политика обработки персональных данных</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal fade modal-block" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-block__container">
+                    <div id="modal-header" class="modal-block__container-fixed">
+                        <span class="modal-block__container-fixed-title">Обработка данных</span>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="modal-block__title">Обработка данных</span>
+                        <button type="button" class="close modal-block__closeBtn" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-block__content">
+                        <span class="modal-block__subTitle">1. Что регулирует настоящая политика конфиденциальности</span>
+                        <p class="modal-block__text">Настоящая политика конфиденциальности (далее — Политика) действует в отношении всей информации, включая персональные данные в понимании применимого законодательства (далее — «Персональная информация»), которую ООО «Гросс маркет» и/или его аффилированные лица, в том числе входящие в одну группу с ООО «Гросс маркет» (далее — «Гросс маркет»), могут получить о Вас в процессе использования Вами любых сайтов, программ, продуктов и/или сервисов Гросс маркет (далее вместе  «Сервисы»), информацию о которых Гросс маркет может также получать Персональную информацию от своих партнеров (далее — «Партнеры»), сайты, программы, продукты или сервисы которых Вы используете (например, от рекламодателей Гросс маркет или службами такси). В таких случаях передача Персональной информации возможна только в случаях, установленных применимым законодательством, и осуществляется на основании специальных договоров между Гросс маркет и каждым из Партнеров.</p>
+                        <br>
+                        <p class="modal-block__text modal-block__text-opacity">Пожалуйста, обратите внимание, что использование любого из Сайтов и/или Сервисов может регулироваться дополнительными условиями, которые могут вносить в настоящую Политику изменения и/или дополнения, и/или иметь специальные условия в отношении персональной информации, размещенные в соответствующих разделах документов для таких Сайтов /или Сервисов.</p>
+                    </div>
+                    <div class="modal-block__content">
+                        <span class="modal-block__subTitle">2. Кто обрабатывает информацию</span>
+                        <p class="modal-block__text">Для обеспечения использования Вами Сайтов и Сервисов Ваша Персональная информация собирается и используется Яндексом, в том числе включая общество с ограниченной ответственностью «Гросс маркет», юридическое лицо, созданное по законодательству Российской Федерации и зарегистрированное по адресу: 123351, Россия, Москва, ул. Гроссова, д. 12 (ООО «Гросс маркет»), или его аффилированным лицом, предоставляющим соответствующий Сервис в иных юрисдикциях. С информацией о том, какое лицо предоставляет тот или иной Сервис, Вы можете ознакомиться в условиях использования соответствующего Сервиса.</p>
+                    </div>
+                    <div class="modal-block__content">
+                        <span class="modal-block__subTitle">3. Какова цель данной Политики</span>
+                        <p class="modal-block__text">Защита Вашей Персональной информации и Вашей конфиденциальности чрезвычайно важны для Гросс маркета. Поэтому при использовании Вами Сайтов и Сервисов Гросс маркет защищает и обрабатывает Вашу Персональную информацию в строгом соответствии с применимым законодательством.</p>
+                    </div>
+                    <div class="modal-block__content">
+                        <span class="modal-block__subTitle">4. Какую Персональную информацию о Вас собирает Гросс маркет</span>
+                        <p class="modal-block__text">Для обеспечения использования Вами Сайтов и Сервисов Ваша Персональная информация собирается и используется Яндексом, в том числе включая общество с ограниченной ответственностью «Гросс маркет», юридическое лицо, созданное по законодательству Российской Федерации и зарегистрированное по адресу: 123351, Россия, Москва, ул. Гроссова, д. 12 (ООО «Гросс маркет»), или его аффилированным лицом, предоставляющим соответствующий Сервис в иных юрисдикциях. С информацией о том, какое лицо предоставляет тот или иной Сервис, Вы можете ознакомиться в условиях использования соответствующего Сервиса.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="assets/js/libs.min.js" type="module"></script>
+
+</body>
+</html>

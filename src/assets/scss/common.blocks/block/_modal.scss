@@ -1,0 +1,137 @@
+.modal-block {
+  .modal-dialog {
+    max-width: 1100px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .modal-body {
+    padding: 72px 95px 30px 95px;
+  }
+}
+
+.modal-block__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-block__title {
+  font-weight: 500;
+  font-size: rem(72);
+  line-height: rem(66);
+  color: $font-color-1;
+  display: block;
+  margin-bottom: 48px;
+}
+
+.modal-block__content {
+  margin-bottom: 48px;
+}
+
+.modal-block__subTitle {
+  font-weight: 500;
+  font-size: rem(18);
+  line-height: rem(23);
+  color: $font-color-1;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.modal-block__text {
+  font-size: rem(14);
+  line-height: rem(22);
+  color: $font-color-1;
+  display: block;
+  margin-bottom: 0;
+}
+
+.modal-block__text-opacity {
+  color: #B3B3B3;
+}
+
+.modal-block__container-fixed {
+  position: fixed;
+  z-index: -2;
+  top: -100px;
+  left: 0;
+  right: 0;
+  transition: 0.3s;
+  background: #FFFFFF;
+  padding: 30px 95px;
+  max-width: 1068px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+
+  &.out {
+    z-index: 3;
+    top: 0;
+    transition: 0.3s;
+    opacity: 1;
+  }
+}
+
+.modal-block__container-fixed-title {
+  font-weight: 500;
+  font-size: rem(24);
+  line-height: rem(30);
+  color: $font-color-1;
+}
+
+.modal-block__closeBtn {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+}
+
+@media (max-width: 1100px) {
+  .modal-block__container-fixed {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .modal-block .modal-body {
+    padding: 32px 24px;
+  }
+
+  .modal-block__title {
+    word-spacing: 300px;
+  }
+
+  .modal-block__container-fixed {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .modal-block .modal-dialog {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .modal-block .modal-body {
+    padding-top: 72px;
+  }
+
+  .modal-block .modal-body,
+  .modal-block__container-fixed {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .modal-block__container-fixed {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .modal-block__title {
+    font-size: 48px;
+    line-height: 44px;
+    margin-bottom: 32px;
+  }
+}

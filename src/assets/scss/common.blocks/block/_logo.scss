@@ -1,0 +1,37 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: rem(32);
+  line-height: rem(41);
+  color: $font-color-1;
+
+  &:hover {
+    color: $font-color-1;
+    text-decoration: none;
+  }
+}
+
+.logo-icon {
+  margin-right: 16px;
+  width: 21px;
+  height: 30px;
+  display: block;
+  background: url("../img/logo-icon.svg") no-repeat center;
+  background-size: 100% auto;
+}
+
+@media (max-width: 767.98px) {
+  .logo {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .logo-icon {
+    width: 17px;
+    height: 24px;
+    margin-right: 12px;
+    transform: translateY(2px);
+  }
+}

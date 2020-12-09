@@ -1,0 +1,101 @@
+html, body {
+  font-family: 'Euclid Circular B', sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+}
+
+.section {
+  padding-bottom: 72px;
+  overflow: hidden;
+}
+
+.section__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  color: $font-color-1;
+  margin-bottom: 32px;
+  display: block;
+}
+
+.fb-icon {
+  background: url("../img/iconmonstr-facebook-icon.svg") no-repeat center;
+  background-size: 100% auto;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.vk-icon {
+  background: url("../img/iconmonstr-vk-img.svg") no-repeat center;
+  background-size: 100% auto;
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.content-elem {
+  background: $secondary;
+  width: 100%;
+  height: 100%;
+  border-radius: $border-radius;
+}
+
+.btn-arrow {
+  background: url("../img/btn-arrow.svg") no-repeat center;
+  background-size: 100% auto;
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+
+.btn-arrow_rotate {
+  transform: rotate(180deg);
+}
+
+.slick-disabled {
+  .btn-arrow  {
+    background: url("../img/btn-arrow-grey.svg") no-repeat center;
+    background-size: 100% auto;
+  }
+}
+
+.close {
+  width: 24px;
+  height: 24px;
+  background: url("../img/close-icon.svg") no-repeat center;
+  background-size: 100% auto;
+
+  span {
+    font-size: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 991.98px) {
+  .content-elem {
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% - 30px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section__title {
+    font-size: rem(24);
+    line-height: rem(30);
+  }
+}

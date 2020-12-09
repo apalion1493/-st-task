@@ -1,0 +1,37 @@
+//LIBRARY
+@import "library.styles/bootstrap/bootstrap";
+//@import "node_modules/owl.carousel/src/scss/owl.carousel";
+//@import "node_modules/owl.carousel/src/scss/owl.theme.default";
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/slick-carousel/slick/slick-theme.scss";
+
+//MIXINS
+@import "common.blocks/utils/mixins";
+
+//VARIABLE
+@import "common.blocks/utils/variable";
+
+//TEXT
+@import "common.blocks/utils/text";
+
+//FONTS
+@import "common.blocks/utils/fonts";
+
+//CONTAINERS
+@import "common.blocks/containers/header";
+@import "common.blocks/containers/footer";
+@import "common.blocks/containers/instagram-section";
+@import "common.blocks/containers/vacancies-section";
+
+//BLOCKS
+@import "common.blocks/block/logo";
+@import "common.blocks/block/carousel";
+@import "common.blocks/block/slider";
+@import "common.blocks/block/text-cloud";
+@import "common.blocks/block/map-yandex";
+@import "common.blocks/block/modal";
+
+//main styles
+@import "common.blocks/utils/common";
+
+

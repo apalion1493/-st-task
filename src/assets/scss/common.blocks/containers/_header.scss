@@ -1,0 +1,72 @@
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header__row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.header__blockConnection {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header__phoneNumber {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: $font-color-1;
+  display: block;
+  margin-right: 32px;
+
+  &:hover {
+    color: $font-color-1;
+  }
+}
+
+.header__blockConnection-btn {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .header__phoneNumber {
+    font-size: 0;
+    width: 24px;
+    height: 24px;
+    background: url("../img/iconmonstr-phone-logo.svg") no-repeat center;
+    background-size: 100% auto;
+    margin-right: 0;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  
+  .header__blockConnection-btn {
+    position: fixed;
+    z-index: -1;
+    top: -100px;
+    left: 15px;
+    right: 15px;
+    width: calc(100% - 30px);
+    transition: 0.2s;
+  }
+
+  .header.out {
+    .header__blockConnection-btn {
+      z-index: 4;
+      top: 18px;
+      transition: 0.2s;
+    }
+  }
+}

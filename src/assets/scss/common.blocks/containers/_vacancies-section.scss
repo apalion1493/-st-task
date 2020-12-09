@@ -1,0 +1,27 @@
+.vacancies-section {
+
+}
+
+.vacancies-section__buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-bottom: 32px;
+  width: 72px;
+  justify-content: space-between;
+}
+
+.slider-btn {
+  width: 24px;
+  height: 24px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: #FFFFFF;
+
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+}
