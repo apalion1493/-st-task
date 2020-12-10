@@ -4,3 +4,76 @@
   border-radius: $border-radius;
   overflow: hidden;
 }
+
+.map-wrapper {
+  position: relative;
+}
+
+.btn-map {
+  display: inline-flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #FFFFFF;
+  margin-top: 8px;
+
+  &.active {
+    background: $primary;
+  }
+}
+
+.map-btnGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 24px;
+  bottom: 30px;
+  z-index: 2;
+}
+
+.mapTitle {
+  position: absolute;
+  z-index: 1000;
+  box-shadow: rgba(0,0,0,.25) 0 0 5px;
+  display: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  background: #fff;
+  border-image: initial;
+  border: 1px solid #ccc;
+}
+
+#wrapMap {
+  position: relative;
+  
+  &.active {
+    &:before {
+      display: none;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    cursor: help;
+    width: 100%;
+    height: 613px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .map-wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  #wrapMap {
+    &:before {
+      display: none;
+    }
+  }
+}

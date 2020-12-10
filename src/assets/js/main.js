@@ -32,31 +32,6 @@ $('.slider').slick({
 });
 
 
-// import 'owl.carousel/dist/owl.carousel';
-
-// $('.owl-carousel').owlCarousel({
-//     margin:27,
-//     loop:false,
-//     autoWidth:true,
-//     items:3
-// });
-
-// let owl = $('.carousel');
-//
-// owl.owlCarousel({
-//     items: 1,
-//     lazyLoad: true,
-//     dots: false,
-//     nav: false,
-// });
-//
-// $(".next").click(function(){
-//     owl.trigger("next.owl.carousel");
-// });
-// $(".prev").click(function(){
-//     owl.trigger("prev.owl.carousel");
-// });
-
 let header = $('#header');
 let modalContainer = $('.modal-block');
 let modalHeader = $('#modal-header');
@@ -93,6 +68,32 @@ $('#instagram-btn').click(function () {
     }
 })
 
+$('.btn-map-check').click(function () {
+    $(this).toggleClass('active')
+})
 
+$('.btnMain').click(function () {
+    $('.btn-map-check').removeClass('active');
+    $(this).toggleClass('active');
+})
 
+let mapTitle = document.createElement('div');
+let wrapMap = document.querySelector('#wrapMap');
 
+mapTitle.className = 'mapTitle';
+mapTitle.textContent = 'Для активации карты нажмите по ней';
+
+wrapMap.appendChild(mapTitle);
+wrapMap.onclick = function() {
+    this.classList.add('active');
+    this.children[0].removeAttribute('style');
+    mapTitle.parentElement.removeChild(mapTitle);
+};
+wrapMap.onmousemove = function(event) {
+    mapTitle.style.display = 'block';
+    if(event.offsetY > 10) mapTitle.style.top = event.offsetY + 20 + 'px';
+    if(event.offsetX > 10) mapTitle.style.left = event.offsetX + 20 + 'px';
+};
+wrapMap.onmouseleave = function() {
+    mapTitle.style.display = 'none';
+};

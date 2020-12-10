@@ -356,21 +356,24 @@
             </div>
         </div>
     </section>
-    <section class="section">
+    <section class="section map-section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <span class="section__title">география</span>
                 </div>
                 <div class="col-12">
-                    <div class="map-wrapper">
-<!--                        <div class="btn-group-vertical map-btnGroup" role="group" aria-label="Basic example">-->
-<!--                            <button type="button" class="btn btn-light">юрлица</button>-->
-<!--                            <button type="button" class="btn btn-light">физлица</button>-->
-<!--                            <button type="button" class="btn btn-primary">показать всё</button>-->
-<!--                        </div>-->
-<!--                        <input type="checkbox" id="checkBtn">-->
-                        <div class="map-yandex" id="map"></div>
+                    <div class="map-wrapper" >
+                        <div class="map-btnGroup">
+                            <button class="btn btn-map btn-map-check">юрлица</button>
+                            <button class="btn btn-map btn-map-check">физлица</button>
+                            <button class="btn btnMain btn-map active">показать всё</button>
+                        </div>
+                        <div id="wrapMap">
+                            <div class="map-yandex" id="map"></div>
+                        </div>
+
+
                     </div>
 
                 </div>
